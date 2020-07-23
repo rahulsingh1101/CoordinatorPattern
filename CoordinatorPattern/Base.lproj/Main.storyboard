@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,101 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="CoordinatorPattern" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9Y-5P-JbH">
+                                <rect key="frame" x="10" y="54" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tib-m3-fPM"/>
+                                    <constraint firstAttribute="width" constant="100" id="za5-a5-gug"/>
+                                </constraints>
+                                <state key="normal" title="Buy"/>
+                                <connections>
+                                    <action selector="buyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7uo-Di-nyU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZp-pR-2MX">
+                                <rect key="frame" x="10" y="114" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Fts-ea-qgY"/>
+                                    <constraint firstAttribute="height" constant="50" id="jBn-TZ-Lk2"/>
+                                </constraints>
+                                <state key="normal" title="Cart"/>
+                                <connections>
+                                    <action selector="cartAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bMl-ce-kMh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="L9Y-5P-JbH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Rvg-tV-xS3"/>
+                            <constraint firstItem="yZp-pR-2MX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Yhe-A1-xRO"/>
+                            <constraint firstItem="yZp-pR-2MX" firstAttribute="top" secondItem="L9Y-5P-JbH" secondAttribute="bottom" constant="10" id="fku-wf-H9R"/>
+                            <constraint firstItem="L9Y-5P-JbH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="tcq-8E-ePh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="128" y="113"/>
+        </scene>
+        <!--Buy View Controller-->
+        <scene sceneID="uxl-tS-O04">
+            <objects>
+                <viewController storyboardIdentifier="BuyViewController" id="irK-4p-yGS" customClass="BuyViewController" customModule="CoordinatorPattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZEe-Aa-rqr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9o-xW-h4s">
+                                <rect key="frame" x="10" y="54" width="29.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e9o-xW-h4s" firstAttribute="leading" secondItem="5wd-bF-QJt" secondAttribute="leading" constant="10" id="0zH-wr-EYW"/>
+                            <constraint firstItem="e9o-xW-h4s" firstAttribute="top" secondItem="5wd-bF-QJt" secondAttribute="top" constant="10" id="aCT-8K-CR4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5wd-bF-QJt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q4P-dD-432" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842" y="113"/>
+        </scene>
+        <!--Cart View Controller-->
+        <scene sceneID="xiF-EV-89L">
+            <objects>
+                <viewController storyboardIdentifier="CartViewController" id="7RZ-y1-wYP" customClass="CartViewController" customModule="CoordinatorPattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tba-nU-DmL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBH-qy-Esa">
+                                <rect key="frame" x="10" y="54" width="33.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SBH-qy-Esa" firstAttribute="leading" secondItem="oY1-oj-8w6" secondAttribute="leading" constant="10" id="hcu-Xx-yQu"/>
+                            <constraint firstItem="SBH-qy-Esa" firstAttribute="top" secondItem="oY1-oj-8w6" secondAttribute="top" constant="10" id="zBl-TB-kSq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oY1-oj-8w6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LyB-Zo-PME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1554" y="113"/>
         </scene>
     </scenes>
 </document>
