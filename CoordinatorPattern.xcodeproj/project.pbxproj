@@ -17,6 +17,7 @@
 		1885D81324C952B700D453A5 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885D81224C952B700D453A5 /* StoryboardHelper.swift */; };
 		1885D81724C9564A00D453A5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885D81624C9564A00D453A5 /* Coordinator.swift */; };
 		1885D81924C956F300D453A5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885D81824C956F300D453A5 /* MainCoordinator.swift */; };
+		1885D81B24C966A100D453A5 /* BuyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885D81A24C966A100D453A5 /* BuyCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1885D81224C952B700D453A5 /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		1885D81624C9564A00D453A5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1885D81824C956F300D453A5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		1885D81A24C966A100D453A5 /* BuyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				1885D81624C9564A00D453A5 /* Coordinator.swift */,
 				1885D81824C956F300D453A5 /* MainCoordinator.swift */,
+				1885D81A24C966A100D453A5 /* BuyCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				1885D81324C952B700D453A5 /* StoryboardHelper.swift in Sources */,
 				1885D81924C956F300D453A5 /* MainCoordinator.swift in Sources */,
 				1849C17524C7EB69005BCE7A /* ViewController.swift in Sources */,
+				1885D81B24C966A100D453A5 /* BuyCoordinator.swift in Sources */,
 				1849C18624C91AB0005BCE7A /* BuyViewController.swift in Sources */,
 				1849C18824C94770005BCE7A /* CartViewController.swift in Sources */,
 				1849C17124C7EB69005BCE7A /* AppDelegate.swift in Sources */,
